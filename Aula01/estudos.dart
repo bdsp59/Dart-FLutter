@@ -9,6 +9,24 @@ void drawTriangle(){
   print("/ |");
 }
 
+void sayHi(String username){
+  print("Hi ${username}!");
+}
+
+double calc(double num1, double num2){
+  double total = num1 + num2;
+  return total;
+}
+
+String prompt(String promptText){
+    print(promptText);
+    var answer = stdin.readLineSync();
+    if(answer != null){
+      return answer;
+    }
+    String erro = "It is empty";
+    return erro;
+}
 
 void main(){
   
@@ -199,5 +217,25 @@ void main(){
   drawTriangle();
   drawTriangle();
   drawTriangle();
-}
 
+  //Parametros e argumentos - Chamando funções com parametros
+  print("");
+  print("-------------------------------");
+
+  sayHi("{username}");
+  sayHi("Lucas");
+  sayHi("Maite");
+
+  //Return
+  print("");
+  print("-------------------------------");
+
+  print(calc(5.4, 6.7));
+
+  //Building a prompt function
+  print("");
+  print("-------------------------------");
+
+  String color2 = prompt("What's your favorite color?");
+
+}
